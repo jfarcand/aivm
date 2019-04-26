@@ -1,0 +1,61 @@
+body {
+	margin: 2em;
+	display: grid;
+	grid-template-columns: auto auto auto auto auto; 
+	grid-gap: 2em;
+
+	--color-accent1: 26, 100%;
+	--color-accent2: 80, 60%;
+	--color-muted: 220, 20%;
+}
+
+h1 {
+	margin-top: 0;
+	font-weight: 100;
+	font-size: 200%;
+	line-height: 1;
+	color: hsl(var(--color-accent1), 48%);
+}
+
+a {
+	color: hsl(var(--color-muted), 40%);
+}
+
+button {
+	cursor: pointer;
+}
+
+[mv-app="receive"] [property=queue] {
+	background: hsl(var(--color-muted), 92%);
+	padding: .5em;
+	margin: .5em 0;
+	border-radius: .25em;
+}
+
+[mv-app="segment"] [property=queue] {
+	background: hsl(var(--color-muted), 92%);
+	padding: .5em;
+	margin: .5em 0;
+	border-radius: .25em;
+}
+
+[mv-app="extract"] [property=queue] {
+	background: hsl(var(--color-muted), 92%);
+	padding: .5em;
+	margin: .5em 0;
+	border-radius: .25em;
+}
+
+[mv-app="validate"] [property=queue] {
+	background: hsl(var(--color-muted), 92%);
+	padding: .5em;
+	margin: .5em 0;
+	border-radius: .25em;
+
+}
+[mv-app="publish"] [property=queue] {
+	background: hsl(var(--color-muted), 92%);
+	padding: .5em;
+	margin: .5em 0;
+	border-radius: .25em;
+}
