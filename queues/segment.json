@@ -2,6 +2,9 @@
 	"segment": [
 		{
 			"task": "T"
+		},
+		{
+			"task": "T"
 		}
 	]
 }
