@@ -1,7 +1,3 @@
 {
-	"validate": [
-		{
-			"task": "Test"
-		}
-	]
+	"validate": []
 }
