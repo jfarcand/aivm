@@ -2,50 +2,61 @@
 <html lang="en">
 <head>
 
-<meta charset="UTF-8">
-<title>E-shop</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://dev.mavo.io/dist/mavo.css">
-<script src="https://dev.mavo.io/dist/mavo.js"></script>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>E-shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://dev.mavo.io/dist/mavo.css">
+    <script src="https://dev.mavo.io/dist/mavo.js"></script>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
 
-<div mv-app="receive" mv-storage="local" mv-bar="no-login">
-	<h1>Receive</h1>
+<div mv-app="receive" mv-storage="https://github.com/jfarcand/aivm/queues" mv-bar="no-login">
+    <h1>Receive</h1>
 
-	<article property="queue" mv-multiple>
-		<span property="name"></span>
-	</article>
+    <article property="receive" mv-multiple>
+        <span property="task"></span>
+        <button mv-action="add(receive, segment.segment)
+		                   delete(receive)" class="in-queue">Execute
+        </button>
+    </article>
 </div>
-<div mv-app="segment" mv-storage="local" mv-bar="no-login">
-	<h1>Segment</h1>
+<div mv-app="segment" mv-storage="https://github.com/jfarcand/aivm/queues" mv-bar="no-login">
+    <h1>Segment</h1>
 
-	<article property="queue" mv-multiple>
-		<span property="name"></span>
-	</article>
+    <article property="segment" mv-multiple>
+        <span property="task"></span>
+        <button mv-action="add(segment, extract.extract)
+		                   delete(segment)" class="in-queue">Execute</button>
+    </article>
 </div>
-<div mv-app="extract" mv-storage="local" mv-bar="no-login">
-	<h1>Extract</h1>
+<div mv-app="extract" mv-storage="https://github.com/jfarcand/aivm/queues" mv-bar="no-login">
+    <h1>Extract</h1>
 
-	<article property="queue" mv-multiple>
-		<span property="name"></span>
-	</article>
+    <article property="extract" mv-multiple>
+        <span property="task"></span>
+        <button mv-action="add(extract, validate.validate)
+		                   delete(extract)" class="in-queue">Execute</button>
+    </article>
 </div>
-<div mv-app="validate" mv-storage="local" mv-bar="no-login">
-	<h1>Validate</h1>
+<div mv-app="validate" mv-storage="https://github.com/jfarcand/aivm/queues" mv-bar="no-login">
+    <h1>Validate</h1>
 
-	<article property="queue" mv-multiple>
-		<span property="name"></span>
-	</article>
+    <article property="validate" mv-multiple>
+        <span property="task"></span>
+        <button mv-action="add(validate, publish.publish)
+                delete(validate)" class="in-queue">Execute</button>
+    </article>
 </div>
-<div mv-app="publish" mv-storage="local" mv-bar="no-login">
-	<h1>Publish</h1>
+<div mv-app="publish" mv-storage="https://github.com/jfarcand/aivm/queues" mv-bar="no-login">
+    <h1>Publish</h1>
 
-	<article property="queue" mv-multiple>
-		<span property="name"></span>
-	</article>
+    <article property="publish" mv-multiple>
+        <span property="task"></span>
+        <button mv-action="add(publish, done)
+                delete(publish)" class="in-queue">Execute</button>
+    </article>
 </div>
 
 </body>

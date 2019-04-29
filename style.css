@@ -25,37 +25,37 @@ button {
 	cursor: pointer;
 }
 
-[mv-app="receive"] [property=queue] {
+[mv-app="receive"] [property=task] {
 	background: hsl(var(--color-muted), 92%);
-	padding: .5em;
-	margin: .5em 0;
+	padding: auto;
+	margin: auto;
 	border-radius: .25em;
 }
 
-[mv-app="segment"] [property=queue] {
+[mv-app="segment"] [property=task] {
 	background: hsl(var(--color-muted), 92%);
-	padding: .5em;
-	margin: .5em 0;
+	padding: auto;
+	margin: auto;
 	border-radius: .25em;
 }
 
-[mv-app="extract"] [property=queue] {
-	background: hsl(var(--color-muted), 92%);
-	padding: .5em;
-	margin: .5em 0;
+[mv-app="extract"] [property=task] {
+	background: hsl(var(--color-muted), 82%);
+	padding: auto;
+	margin: auto;
 	border-radius: .25em;
 }
 
-[mv-app="validate"] [property=queue] {
-	background: hsl(var(--color-muted), 92%);
-	padding: .5em;
-	margin: .5em 0;
+[mv-app="validate"] [property=task] {
+	background: hsl(var(--color-muted), 72%);
+	padding: auto;
+	margin: auto;
 	border-radius: .25em;
 
 }
-[mv-app="publish"] [property=queue] {
-	background: hsl(var(--color-muted), 92%);
-	padding: .5em;
-	margin: .5em 0;
+[mv-app="publish"] [property=task] {
+	background: hsl(var(--color-muted), 62%);
+	padding: auto;
+	margin: auto;
 	border-radius: .25em;
 }
