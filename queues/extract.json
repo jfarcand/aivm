@@ -1,16 +1,3 @@
 {
-	"extract": [
-		{
-			"task": "Test"
-		},
-		{
-			"task": "T"
-		},
-		{
-			"task": "Test"
-		},
-		{
-			"task": "OAF-2"
-		}
-	]
+	"extract": []
 }
