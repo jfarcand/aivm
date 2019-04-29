@@ -1,3 +1,7 @@
 {
-	"receive": []
+	"receive": [
+		{
+			"task": "1"
+		}
+	]
 }
