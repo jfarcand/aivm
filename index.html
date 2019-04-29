@@ -12,16 +12,16 @@
 </head>
 <body>
 
-<div mv-app="receive" mv-storage="https://github.com/jfarcand/aivm/queues" mv-bar="no-login">
+<div mv-app="receive" mv-storage="https://github.com/jfarcand/aivm/queues">
     <h1>Receive</h1>
 
-    <article property="receive" mv-multiple>
+    <article property="receive" mv-multiple mv-mode="edit" mv-bar="logout" mv-autosave="5">
         <span property="task"></span>
         <button mv-action="move(receive, segment.segment)" class="in-queue">Execute
         </button>
     </article>
 </div>
-<div mv-app="segment" mv-storage="https://github.com/jfarcand/aivm/queues" mv-bar="no-login">
+<div mv-app="segment" mv-storage="https://github.com/jfarcand/aivm/queues" mv-bar="none" mv-autosave="5">
     <h1>Segment</h1>
 
     <article property="segment" mv-multiple>
@@ -29,7 +29,7 @@
         <button mv-action="move(segment, extract.extract)" class="in-queue">Execute</button>
     </article>
 </div>
-<div mv-app="extract" mv-storage="https://github.com/jfarcand/aivm/queues" mv-bar="no-login">
+<div mv-app="extract" mv-storage="https://github.com/jfarcand/aivm/queues" mv-bar="none" mv-autosave="5">
     <h1>Extract</h1>
 
     <article property="extract" mv-multiple>
@@ -37,7 +37,7 @@
         <button mv-action="move(extract, validate.validate)" class="in-queue">Execute</button>
     </article>
 </div>
-<div mv-app="validate" mv-storage="https://github.com/jfarcand/aivm/queues" mv-bar="no-login">
+<div mv-app="validate" mv-storage="https://github.com/jfarcand/aivm/queues" mv-bar="none" mv-autosave="5">
     <h1>Validate</h1>
 
     <article property="validate" mv-multiple>
@@ -45,7 +45,7 @@
         <button mv-action="move(validate, publish.publish)" class="in-queue">Execute</button>
     </article>
 </div>
-<div mv-app="publish" mv-storage="https://github.com/jfarcand/aivm/queues" mv-bar="no-login">
+<div mv-app="publish" mv-storage="https://github.com/jfarcand/aivm/queues" mv-bar="none" mv-autosave="5">
     <h1>Publish</h1>
 
     <article property="publish" mv-multiple>
@@ -55,11 +55,6 @@
     </article>
 </div>
 
-<div mv-app="done" mv-storage="https://github.com/jfarcand/aivm/queues" mv-bar="no-login">
-    <article property="done" mv-multiple>
-    </article>
-
-</div>
 
 </body>
 </html>
