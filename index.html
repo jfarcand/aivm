@@ -17,8 +17,7 @@
 
     <article property="receive" mv-multiple>
         <span property="task"></span>
-        <button mv-action="add(receive, segment.segment)
-		                   delete(receive)" class="in-queue">Execute
+        <button mv-action="move(receive, segment.segment)" class="in-queue">Execute
         </button>
     </article>
 </div>
@@ -27,8 +26,7 @@
 
     <article property="segment" mv-multiple>
         <span property="task"></span>
-        <button mv-action="add(segment, extract.extract)
-		                   delete(segment)" class="in-queue">Execute</button>
+        <button mv-action="move(segment, extract.extract)" class="in-queue">Execute</button>
     </article>
 </div>
 <div mv-app="extract" mv-storage="https://github.com/jfarcand/aivm/queues" mv-bar="no-login">
@@ -36,8 +34,7 @@
 
     <article property="extract" mv-multiple>
         <span property="task"></span>
-        <button mv-action="add(extract, validate.validate)
-		                   delete(extract)" class="in-queue">Execute</button>
+        <button mv-action="move(extract, validate.validate)" class="in-queue">Execute</button>
     </article>
 </div>
 <div mv-app="validate" mv-storage="https://github.com/jfarcand/aivm/queues" mv-bar="no-login">
@@ -45,8 +42,7 @@
 
     <article property="validate" mv-multiple>
         <span property="task"></span>
-        <button mv-action="add(validate, publish.publish)
-                delete(validate)" class="in-queue">Execute</button>
+        <button mv-action="move(validate, publish.publish)" class="in-queue">Execute</button>
     </article>
 </div>
 <div mv-app="publish" mv-storage="https://github.com/jfarcand/aivm/queues" mv-bar="no-login">
@@ -54,9 +50,15 @@
 
     <article property="publish" mv-multiple>
         <span property="task"></span>
-        <button mv-action="add(publish, done)
+        <button mv-action="
                 delete(publish)" class="in-queue">Execute</button>
     </article>
+</div>
+
+<div mv-app="done" mv-storage="https://github.com/jfarcand/aivm/queues" mv-bar="no-login">
+    <article property="done" mv-multiple>
+    </article>
+
 </div>
 
 </body>
