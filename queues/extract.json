@@ -2,6 +2,9 @@
 	"extract": [
 		{
 			"task": "T"
+		},
+		{
+			"task": "T"
 		}
 	]
 }
