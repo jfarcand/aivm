@@ -18,6 +18,9 @@
 		},
 		{
 			"task": "test"
+		},
+		{
+			"task": "test"
 		}
 	]
 }
