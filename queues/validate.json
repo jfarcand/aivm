@@ -2,6 +2,9 @@
 	"validate": [
 		{
 			"task": "T"
+		},
+		{
+			"task": "T"
 		}
 	]
 }
