@@ -1,25 +1,3 @@
 {
-	"segment": [
-		{
-			"task": "OAF-1 Submission 34345"
-		},
-		{
-			"task": "OAF-2"
-		},
-		{
-			"task": "OAF 3217948712983412"
-		},
-		{
-			"task": "OAF-1 Submission 64345"
-		},
-		{
-			"task": "Test"
-		},
-		{
-			"task": "T"
-		},
-		{
-			"task": "OAF-1 Submission 64345"
-		}
-	]
+	"segment": []
 }
