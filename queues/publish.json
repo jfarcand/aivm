@@ -1,3 +1,7 @@
 {
-	"publish": []
+	"publish": [
+		{
+			"task": "test"
+		}
+	]
 }
